@@ -11,9 +11,6 @@ public interface ArtistaRepository extends JpaRepository<Artista, Long>{
 
 	@Query("SELECT a.nome FROM Artista a WHERE a.nome like '% + :nome + %' ")
 	List<Artista> procuraPeloNome(@Param("nome") String nome);	
-
-	
-
 	
 //	@Query("SELECT a.nome FROM Artista a WHERE a.nome LIKE CONCAT('%',:nome,'%')")
 //	List<Artista> procuraPeloNome(@Param("nome") String nome);
