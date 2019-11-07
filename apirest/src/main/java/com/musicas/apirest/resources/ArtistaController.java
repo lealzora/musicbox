@@ -12,10 +12,9 @@ import com.musicas.apirest.repository.ArtistaRepository;
 import com.musicas.apirest.models.Artista;
 import java.util.List;
 
-
 @RestController
 @RequestMapping(value = "/api")
-public class ArtistaResource {
+public class ArtistaController {
 	
 	@Autowired
 	ArtistaRepository artistaRepository;

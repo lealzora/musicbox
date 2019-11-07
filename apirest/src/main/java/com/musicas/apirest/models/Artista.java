@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name="artista")
 public class Artista implements Serializable {
@@ -16,6 +17,7 @@ public class Artista implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	private String nome;
+//	private Set<Album> albums = new HashSet<Album>(0);
 	
 	
 	/*
@@ -33,4 +35,13 @@ public class Artista implements Serializable {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+//	@OneToMany(fetch = FetchType.LAZY, mappedBy = "artista", cascade = CascadeType.REMOVE)
+//	public Set<Album> getAlbums() {
+//		return this.albums;
+//	}
+//	public void setAlbums(Set<Album> albums) {
+//		this.albums = albums;
+//	}
+	
 }
